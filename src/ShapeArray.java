@@ -7,17 +7,38 @@ public class ShapeArray {
         
 		// take user input for width and length
         System.out.println("Please Enter width & length: ");
-        Scanner userInput = new Scanner(System.in);
+        Scanner userInputRec = new Scanner(System.in);
         
-        double width = userInput.nextDouble();
-        double length = userInput.nextDouble();
+        // assign userInput to width and length
         
+        double width = userInputRec.nextDouble();
+        double length = userInputRec.nextDouble();
+        
+        //  Instantiate one rectangle
         Shape rectangle = new Rectangle(width, length);
+        
+        // print out stats for rectangle 
+    
         System.out.println("Rectangle width: " + width + " and length: " + length
-                + "\nResulting area: " + rectangle.area()
-                + "\nResulting perimeter: " + rectangle.parameter() + "\n");
-
-
+                + "\narea: " + rectangle.area()
+                + "\nperimeter: " + rectangle.parameter() + "\n");
+        
+        System.out.println("*****************************************");
+		// Shape - Circle
+        
+        System.out.println("Please Enter radius for circle: ");
+        
+        Scanner userInputCircle = new Scanner(System.in);
+        
+        double radius = userInputCircle.nextDouble();
+        
+        Shape circle = new Circle(radius);
+        System.out.println("Circle radius: " + radius
+                + "\narea: " + circle.area()
+                + "\nperimeter: " + circle.parameter() + "\n");
+        
+        System.out.println("*****************************************");
+        
 	}
 
 }

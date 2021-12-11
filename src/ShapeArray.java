@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// driver class
 public class ShapeArray {
 
 	public static void main(String[] args) {
@@ -39,6 +40,21 @@ public class ShapeArray {
         
         System.out.println("*****************************************");
         
+        System.out.println("Please Enter 3 lengths for each side of a triangle: ");
+        
+        Scanner userInputTriangle = new Scanner(System.in);
+        
+    	double length_side1 = userInputTriangle.nextDouble();  
+    	double length_side2 = userInputTriangle.nextDouble(); 
+    	double length_side3 = userInputTriangle.nextDouble();
+    	
+    	Shape triangle = new Triangle(length_side1, length_side2, length_side3);
+        
+        System.out.println("Length Side 1: " + length_side1 + " length side 2: " + length_side2 + 
+        		" length side 3: " + length_side3
+                + "\narea: " + triangle.area()
+                + "\nperimeter: " + triangle.parameter() + "\n");
+
 	}
 
 }

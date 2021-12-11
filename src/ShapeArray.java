@@ -5,40 +5,30 @@ public class ShapeArray {
 
 	public static void main(String[] args) {
 		// Shape - Rectangle
-	System.out.println("Please Enter width & length: ");
-      Scanner userInputRec = new Scanner(System.in);
+
       
-      // assign userInput to width and length
-      double width = userInputRec.nextDouble();
-      double length = userInputRec.nextDouble();
-      
-      //  Instantiate one rectangle
-      Shape rectangle = new Rectangle(width, length);
-      
-//      Instantiate one circle
-      System.out.println("Please Enter radius for circle: ");
-//    
-      Scanner userInputCircle = new Scanner(System.in);
-//    
-      double radius = userInputCircle.nextDouble();
-      
-      Shape circle = new Circle(radius);
-      
-//      Instantiate one circle triangle
-	   System.out.println("Please Enter 3 lengths for each side of a triangle: ");
-	//    
-	   Scanner userInputTriangle = new Scanner(System.in);
-	//    
-	   	double length_side1 = userInputTriangle.nextDouble();  
-		double length_side2 = userInputTriangle.nextDouble(); 
-		double length_side3 = userInputTriangle.nextDouble();
-		Shape triangle = new Triangle(length_side1, length_side2, length_side3);
+//      //  Instantiate one rectangle
+		Shape rectangle = new Rectangle(5, 7);
+//      
+////      Instantiate one circle
+//
+//      
+//      double radius;
+      	Shape circle = new Circle(3);
+//      
+////      Instantiate one triangle
+//
+		Shape triangle = new Triangle(1, 2, 3);
 		
 		// Initiating shapeArray
-		Shape [] shapeArray = {rectangle, circle, triangle};
+		Shape shapeArray[] = new Shape[100];
 		
-		for(Shape s : shapeArray) {
-			s.toString();
+		shapeArray[0] = circle;
+		shapeArray[1] = rectangle;
+		shapeArray[2] = triangle;
+		
+		for(int i = 0; i < shapeArray.length; i++) {
+			shapeArray[i].toString();
 		}
 		
 		
@@ -93,9 +83,6 @@ public class ShapeArray {
 
 	}
 
-	private static ShapeArray rectangle(double width, double length) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 }

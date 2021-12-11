@@ -4,7 +4,7 @@
 public class Circle extends Shape {
 	
 	// radius attributes 
-	double radius;
+	double radius = 3;
 	double pi = Math.PI;
 	double circle_parameter;
 	double circle_area;
@@ -18,20 +18,20 @@ public class Circle extends Shape {
    //	"toString" method that prints out the area and parameter
    
    public String toString() {
-		return  "Parameter: " + circle_parameter + " Area: " + circle_area;
+		return  "Circle Parameter: " + area() + " Circle Area: " + parameter();
    	
    }
    
 	@Override
 	public double area() {
 		// TODO Auto-generated method stub
-		return circle_area = pi * Math.pow(radius, 2); 
+		return pi * Math.pow(radius, 2); 
 	}
 
 	@Override
 	public double parameter() {
 		// TODO Auto-generated method stub
-		return circle_parameter = 2 * pi * radius;
+		return 2 * pi * radius;
 	}
 
 }

@@ -6,8 +6,7 @@ public class Rectangle extends Shape {
 	// attributes width and length
 	double width;
 	double length;
-	double rectangle_parameter;
-	double reactangle_area;
+
 	
 //	parameterized constructor needed initialize the data
 	
@@ -18,7 +17,7 @@ public class Rectangle extends Shape {
 	
 // 	"toString" method that prints out the area and parameter
     public String toString() {
-		return  "Parameter: " + rectangle_parameter + " Area: " + reactangle_area;
+		return  "Rectangle Parameter: " + area() + " Rectangle Area: " + parameter();
     	
     }
     
@@ -26,13 +25,13 @@ public class Rectangle extends Shape {
 	@Override
 	public double area() {
 		// TODO Auto-generated method stub
-		return reactangle_area = width * length;
+		return width * length;
 	}
 
 	@Override
 	public double parameter() {
 		// TODO Auto-generated method stub
-		return  rectangle_parameter = 2 * (length + width);
+		return 2 * (length + width);
 	}
 	
 }
